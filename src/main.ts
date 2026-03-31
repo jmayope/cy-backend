@@ -38,10 +38,10 @@ async function bootstrap() {
 
   const port = configService.get<number>("PORT") || 3000;
   console.log(port);
-  // const host = "localhost";
-  const host = "192.168.1.18";
-  await app.listen(port, host);
-  // await app.listen(port);
+  const host = "localhost";
+  // const host = "192.168.1.18";
+  // await app.listen(port, host);
+  await app.listen(port);
 
   logger.log(`Application is running on: http://${host}:${port}`);
 }
